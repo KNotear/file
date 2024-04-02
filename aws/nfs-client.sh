@@ -1,8 +1,6 @@
 #!/bin/bash
-yum -y install nfs-utils
-mkdir /sharedb
-mount -t nfs xxx.xxx.xxx.xxx:/nfs-shared /sharedb
-echo "xxx.xxx.xxx.xxx:/nfs-shared /test nfs defaults 0 0" >> /etc/fstab
-echo "ec2-metadata -v | cut -d ' ' -f 2" >> /sharedb/list.txt
-umount xxx.xxx.xxx.xxx:/nfs-shared
-rmdir /sharedb
+mkdir /nfs-client
+mount -t nfs 10.1.1.100:/nfs-shared /nfs-client
+ec2-metadata -o | cut -d ' ' -f 2 >> /nfs-client/list.txt
+umount 10.1.1.100:/nfs-shared
+rmdir /nfs-client
