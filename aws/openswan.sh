@@ -15,7 +15,7 @@ read cgwip
 printf "Right IP(Tunnel1 IP) ?"
 read tunnel1ip
 
-cat <<EOF > /root/aws.conf
+cat <<EOF > /etc/ipsec.d/aws.conf 
 conn Tunnel1
 	authby=secret
 	auto=start
