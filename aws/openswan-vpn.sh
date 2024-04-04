@@ -10,7 +10,7 @@ net.ipv4.conf.all.send_redirects = 0
 EOF
 sysctl -p /etc/sysctl.conf
 
-printf "Left IP(CGW IP) ?"
+printf "Left IP(고객게이트웨이 IP) ?"
 read cgwip
 printf "Right IP(Tunnel1 IP) ?"
 read tunnel1ip
