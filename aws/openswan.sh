@@ -1,5 +1,6 @@
 #!/bin/bash
 yum -y install openswan
+
 cat <<EOF >> /etc/sysctl.conf
 net.ipv4.ip_forward = 1
 net.ipv4.conf.default.rp_filter = 0
@@ -7,7 +8,8 @@ net.ipv4.conf.default.accept_source_route = 0
 net.ipv4.conf.all.accept_redirects = 0
 net.ipv4.conf.all.send_redirects = 0
 EOF
-sysctl -p
+sysctl -p /etc/sysctl.conf
+
 printf "Left IP(CGW IP)는 ?"
 read cgwip
 printf "Right IP(TGW IP)는 ?"
