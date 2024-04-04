@@ -20,8 +20,8 @@ conn Tunnel1
 	authby=secret
 	auto=start
 	left=%defaultroute
-	leftid='$cgwip'
-	right='$tunnel1ip'
+	leftid=$cgwip
+	right=$tunnel1ip
 	type=tunnel
 	ikelifetime=8h
 	keylife=1h
