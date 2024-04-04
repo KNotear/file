@@ -29,3 +29,5 @@ conn Tunnel1
   dpdaction=restart_by_peer
 EOF
 echo "52.78.82.59 13.124.200.153: PSK "password"" > /etc/ipsec.d/aws.secrets
+ipsec start
+systemctl enable ipsec.service
