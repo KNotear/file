@@ -12,8 +12,8 @@ sysctl -p /etc/sysctl.conf
 
 printf "Left IP(CGW IP)는 ?"
 read cgwip
-printf "Right IP(TGW IP)는 ?"
-read tgwip
+printf "Right IP(Tunnel1 IP)는 ?"
+read tunnel1ip
 
 cat <<EOF > /root/aws.conf
 conn Tunnel1
@@ -21,7 +21,7 @@ conn Tunnel1
 	auto=start
 	left=%defaultroute
 	leftid='$cgwip'
-	right='$tgwip'
+	right='$tunnel1ip'
 	type=tunnel
 	ikelifetime=8h
 	keylife=1h
