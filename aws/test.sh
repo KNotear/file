@@ -4,7 +4,6 @@ read cgwip
 printf "Right IP(TGW IP)는 ?"
 read tgwip
 
-
 cat <<EOF > /root/aws.conf
 conn Tunnel1
 	authby=secret
