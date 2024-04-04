@@ -10,9 +10,9 @@ net.ipv4.conf.all.send_redirects = 0
 EOF
 sysctl -p /etc/sysctl.conf
 
-printf "Left IP(CGW IP)는 ?"
+printf "Left IP(CGW IP) ?"
 read cgwip
-printf "Right IP(Tunnel1 IP)는 ?"
+printf "Right IP(Tunnel1 IP) ?"
 read tunnel1ip
 
 cat <<EOF > /root/aws.conf
