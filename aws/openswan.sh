@@ -36,6 +36,6 @@ conn Tunnel1
 	dpdaction=restart_by_peer
 EOF
 
-echo "$cgwip $tgwip: PSK "password"" > /etc/ipsec.d/aws.secrets
+echo "$cgwip $tunnel1ip: PSK "password"" > /etc/ipsec.d/aws.secrets
 ipsec start
 systemctl enable ipsec.service
