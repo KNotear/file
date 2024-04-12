@@ -11,6 +11,6 @@ cat <<EOF > /var/www/html/index.html
 <h2> 가용 영역 : ${availability_zone} </h2>
 <br>
 <h3> 인스턴스 ID : ${instance_id} </h3>
-<br>
 <h3> 프라이빗 IP : ${private_ip}</h3>
+<img src='https://s3.notear.xyz/img.jpg' width='800'>
 EOF
