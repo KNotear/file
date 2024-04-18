@@ -1,0 +1,21 @@
+# 야믈 파일임을 명시한다.
+---
+# 플레이북 이름 지정
+- name: Install nginx on Linux
+# 적용할 hosts 선택
+  hosts: localhost
+# 각 노드의 불필요한 정보 수집을 하지 않는 옵션
+  gather_facts: no
+
+# 실제 실행될 내용
+  tasks:
+# 태스크마다 명시적으로 이름을 넣어줌 (name:은 실행은 되지않음)
+    - name: install epel-release
+      yum: name=epel-release state=latest
+    - name: install nginx web server
+      yum: name=nginx state=present
+    - name: upload default index.html for web server
+      get_url: url=https://www.apache.com dest=/usr/share/nginx/html/ mode=0644
+    - name: start nginx web server
+      service: name=nginx state=started
+...
