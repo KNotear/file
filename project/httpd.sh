@@ -47,5 +47,5 @@ cat <<EOF > /var/www/html/index.html
 	</body>
 </html>
 EOF
-systemctl start httpd
+systemctl restart httpd
 systemctl enable httpd
