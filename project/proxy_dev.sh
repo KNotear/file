@@ -20,3 +20,4 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
   Timeout 120
 </VirtualHost>
 EOF
+systemctl restart httpd
