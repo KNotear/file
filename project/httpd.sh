@@ -3,10 +3,8 @@ yum -y install httpd
 systemctl start httpd
 systemctl enable httpd
 cd /var/www/html/
-wget https://github.com/KNotear/file/tree/main/project/fonts
-wget https://github.com/KNotear/file/tree/main/project/images
-wget https://github.com/KNotear/file/blob/main/project/default.css
-wget https://github.com/KNotear/file/blob/main/project/fonts.css
+wget https://github.com/KNotear/file/raw/main/project/web.tar
+tar -cvf web.tar
 availability_zone=$(ec2-metadata -z | cut -d ' ' -f 2)
 cat <<EOF > /var/www/html/index.html
 <html xmlns="http://www.w3.org/1999/xhtml">
