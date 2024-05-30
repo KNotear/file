@@ -5,6 +5,7 @@ wget https://github.com/KNotear/file/raw/main/project/web.tar
 tar -xvf web.tar
 availability_zone=$(ec2-metadata -z | cut -d ' ' -f 2)
 cat <<EOF > /var/www/html/index.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -21,9 +22,13 @@ cat <<EOF > /var/www/html/index.html
 			<div id="header" class="container">
 				<div id="logo">
 					<span class="icon icon-cog"></span>
-					<h1>준비중입니다.</h1>
-					<h2>가용영역:${availability_zone}</h2>
+					<h1><a>준비중입니다.</a></h1>
 				</div>
+			<div id="menu">
+				<ul><li class="active">
+					<a accesskey="1" title="">${availability_zone}</a></li>
+				</ul>
+			</div>
 			</div>
 			<div class="wrapper">
 				<div id="banner" class="container"><img src="images/banner.jpg" width="1200" height="500" alt=""></div>
@@ -34,6 +39,9 @@ cat <<EOF > /var/www/html/index.html
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="copyright">
+			<p>Made with: <a>MMR-CLOUD</a></p>
 		</div>
 	</body>
 </html>
