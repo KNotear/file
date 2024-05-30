@@ -1,3 +1,4 @@
+#!/bin/bash
 "yum -y install java",
 "wget http://dlcdn.apache.org/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.tar.gz",
 "tar xzf apache-tomcat-10.1.24.tar.gz",
