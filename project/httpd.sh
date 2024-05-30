@@ -14,8 +14,8 @@ cat <<EOF > /var/www/html/index.html
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 		<meta name="description" content="">
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900%7CQuicksand:400,700%7CQuestrial" rel="stylesheet">
-		<link href="default.css" rel="stylesheet" type="text/css" media="all">
-		<link href="fonts.css" rel="stylesheet" type="text/css" media="all">
+		<link href="./default.css" rel="stylesheet" type="text/css" media="all">
+		<link href="./fonts.css" rel="stylesheet" type="text/css" media="all">
 	</head>
 	<body>
 		<div id="header-wrapper">
