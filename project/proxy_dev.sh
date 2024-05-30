@@ -15,8 +15,8 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 	SetEnv proxy-nokeepalive 1
 	SetEnv proxy-initial-not-pooled 1
   </Proxy>
-  ProxyPass "/servlet/" "http://internal-DEV-app-alb-503081101.ap-northeast-2.elb.amazonaws.com:8080" ttl=60
-  ProxyPassMAtch "^/.*\.(jsp|do)$" "http://internal-DEV-app-alb-503081101.ap-northeast-2.elb.amazonaws.com:8080/"
+  ProxyPass "/servlet/" "http://internal-DEV-was-alb-1323113022.ap-northeast-2.elb.amazonaws.com:8080" ttl=60
+  ProxyPassMAtch "^/.*\.(jsp|do)$" "http://internal-DEV-was-alb-1323113022.ap-northeast-2.elb.amazonaws.com:8080/"
   Timeout 120
 </VirtualHost>
 EOF
