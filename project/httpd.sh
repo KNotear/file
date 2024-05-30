@@ -1,10 +1,8 @@
 #!/bin/bash
 yum -y install httpd
-systemctl start httpd
-systemctl enable httpd
 cd /var/www/html/
 wget https://github.com/KNotear/file/raw/main/project/web.tar
-tar -cvf web.tar
+tar -xvf web.tar
 availability_zone=$(ec2-metadata -z | cut -d ' ' -f 2)
 cat <<EOF > /var/www/html/index.html
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,3 +38,5 @@ cat <<EOF > /var/www/html/index.html
 	</body>
 </html>
 EOF
+systemctl start httpd
+systemctl enable httpd
