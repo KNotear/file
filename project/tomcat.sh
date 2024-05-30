@@ -14,6 +14,8 @@ echo 'User=root' >> /usr/lib/systemd/system/tomcat.service
 echo 'Group=root' >> /usr/lib/systemd/system/tomcat.service
 echo '[Install]' >> /usr/lib/systemd/system/tomcat.service
 echo 'WantedBy=multi-user.target' >> /usr/lib/systemd/system/tomcat.service
+cd ./apache-tomcat-10.1.24/lib/
+wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar
 systemctl daemon-reload
 systemctl start tomcat
 systemctl enable tomcat
