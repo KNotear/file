@@ -18,7 +18,7 @@ wget https://github.com/KNotear/file/raw/main/project/mysql-connector-java-8.0.3
 cd /apache-tomcat-10.1.20/webapps/ROOT/
 wget https://github.com/KNotear/file/raw/main/project/web.tar
 tar -xvf web.tar
-cat <<EOF > /var/www/html/index.html
+cat <<EOF > /apache-tomcat-10.1.20/webapps/ROOT/db.jsp
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
