@@ -23,7 +23,7 @@ cat <<EOF > /var/www/html/index.html
 			<div id="header" class="container">
 				<div id="logo">
 					<span class="icon icon-cog"></span>
-					<h1><a href="/">준비중입니다.</a></h1>
+					<h1><a href="/">MMR-CLOUD</a></h1>
 				</div>
 			<div id="menu">
 				<ul><li class="active">
