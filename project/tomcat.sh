@@ -50,7 +50,7 @@ cat <<EOF > /var/www/html/index.html
 						Connection conn;
 						Statement stmt;
 						ResultSet rs = null;
-						String query = "select * from test_tbl";
+						String query = "select * from mmr_team";
 			
 						try {
 							Class.forName("com.mysql.jdbc.Driver");
