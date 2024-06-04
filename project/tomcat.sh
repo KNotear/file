@@ -44,9 +44,9 @@ cat <<EOF > /root/apache-tomcat-10.1.24/webapps/ROOT/db.jsp
 			<div id="menu">
 				<ul><li class="active">
 					<%
-						String DB_URL = "jdbc:mysql://mmr-db-cp.clmuc2kwupio.ap-northeast-2.rds.amazonaws.com/test_db";
-						String DB_USER = "admin";
-						String DB_PASSWORD= "password";
+						String DB_URL = "jdbc:mysql://";
+						String DB_USER = "";
+						String DB_PASSWORD= "";
 						Connection conn;
 						Statement stmt;
 						ResultSet rs = null;
